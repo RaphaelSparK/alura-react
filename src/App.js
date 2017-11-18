@@ -3,6 +3,7 @@ import './css/pure-min.css';
 import './css/side-menu.css';
 import $ from 'jquery';
 import InputCustomizado from './componentes/InputCustomizado'
+import ButtonSubmit from './componentes/ButtonSubmit';
 
 class App extends Component {
 
@@ -107,10 +108,10 @@ class App extends Component {
                   value={this.state.senha}
                   onChange={this.setSenha}
                 />
-                <div className="pure-control-group">
-                  <label></label>
-                  <button type="submit" className="pure-button pure-button-primary">Gravar</button>
-                </div>
+                <ButtonSubmit
+                  title="Gravar"
+                  onClick={this.state.enviaForm}
+                />
               </form>
 
             </div>
